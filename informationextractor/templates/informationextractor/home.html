@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<style>
+    .a {
+    color: Red; /* Your height here */
+    text-shadow: aqua;
+}
+</style>
+{% block content %}
+<div>
+        <form action="{{updater}}" method="POST" class = "body">
+            {% csrf_token %}
+                <label> first name</label><br>
+                <input type="text" id="first_name" name="first_name" >
+            
+            <label> last name</label><br>
+            <input type="text" id="last_name" name="last_name">
+            
+            <br><br>
+            <label> Email</label><br>
+            <input type="text" id="email" name="email">
+            
+            <button type="submit">Submit</button>
+        </form>
+</div>
+{% endblock content %}

@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "venvir/bin/python"
+    "python.pythonPath": "/home/abhishek/colab/virtual/bin/python3",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
