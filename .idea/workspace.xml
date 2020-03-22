@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/management/templates/management/home.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/management/templates/management/response.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/avinashbhutani.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/management/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/management/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/views.py" afterDir="false" />
@@ -85,6 +86,7 @@
       <workItem from="1583479133007" duration="78000" />
       <workItem from="1583847395998" duration="10819000" />
       <workItem from="1583903295861" duration="228000" />
+      <workItem from="1584885808425" duration="579000" />
     </task>
     <servers />
   </component>
