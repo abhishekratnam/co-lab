@@ -23,12 +23,3 @@ class Students(models.Model):
         return "{} - {} - {}".format(self.email_id, self.last_name,self.first_name)
 
 
-    
-class Mentorform(ModelForm):
-    class Meta:
-        model = Mentors
-        fields = '__all__'
-class Studentform(ModelForm):
-    class Meta:
-        model = Students
-        fields = '__all__'
