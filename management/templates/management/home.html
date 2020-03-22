@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+<style>
+    .a {
+    color: Red; /* Your height here */
+    text-shadow: aqua;
+}
+</style>
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
