@@ -84,4 +84,16 @@
     </div>
 </div>
 <!-- end content after we help you image -->
-{% endblock body %}
+{% endblock body %} {% block JavascriptBlock %}
+<script>
+    $(document).ready(function() {
+        var typed = new Typed('#write-share-colab-a', {
+            strings: ['WRITE  .  SHARE  .  COLAB.'],
+            typeSpeed: 100,
+            loop: true,
+            backSpeed: 100,
+            backDelay: 300
+        });
+    });
+</script>
+{% endblock JavascriptBlock %}
