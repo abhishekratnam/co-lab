@@ -1,50 +1,90 @@
-/* preloader css */
+#main-container {
+    display: none;
+}
 
-/* end preloader css */
-#header-nav{
+
+/* Add animation to "page content" */
+
+#main-container {
+    position: relative;
+    -webkit-animation-name: main-container;
+    -webkit-animation-duration: 1s;
+    animation-name: main-container;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes main-container {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes main-container {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#header-nav {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }
-.header-shrink{
+
+.header-shrink {
     line-height: 0;
     padding: 0;
     margin: 0;
     height: 70px;
     text-align: center;
 }
-.header-nav{
+
+.header-nav {
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
-.headers-link{
-   
-}
-body{
+
+.headers-link {}
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.logo-header{
+
+.logo-header {
     margin-left: 10rem;
 }
-.header-btn{
+
+.header-btn {
     cursor: pointer;
 }
-.banner-main{
-}
-.top-content-banner{
+
+.banner-main {}
+
+.top-content-banner {
     position: absolute;
     top: 8%;
     left: 0;
     right: 0;
     bottom: 0;
-    margin-left : 13%;
+    margin-left: 13%;
     color: white;
     font-size: 80px;
 }
-.links-content-banner{
+
+.links-content-banner {
     position: absolute;
     top: 73%;
     left: 0%;
@@ -53,7 +93,8 @@ body{
     font-size: 25px;
     color: white;
 }
-.landing-btn-banner{
+
+.landing-btn-banner {
     position: absolute;
     top: 83%;
     left: 0%;
@@ -61,7 +102,8 @@ body{
     bottom: 0;
     font-size: 15px;
 }
-.landing-signin-banner{
+
+.landing-signin-banner {
     position: absolute;
     top: 90%;
     left: 0%;
@@ -69,7 +111,8 @@ body{
     bottom: 0;
     color: lightgrey;
 }
-.dash-banner{
+
+.dash-banner {
     position: absolute;
     top: 95%;
     left: 0%;
@@ -79,57 +122,71 @@ body{
     width: 7rem;
     margin: 0 auto;
 }
-.left-content-home{
+
+.left-content-home {
     color: gray;
     font-size: 18px;
     border-left: 4px solid #333333;
 }
-.first-l-l-c{
+
+.first-l-l-c {
     font-weight: bolder;
     font-style: bold;
     font-size: 25px;
 }
-.m-c-a-w-h-y{
+
+.m-c-a-w-h-y {
     font-size: 25px;
     font-weight: bolder;
 }
-.content-a-w-h-y{
+
+.content-a-w-h-y {
     font-size: 25px;
     font-weight: bolder;
     color: #333333;
 }
-.content-a-w-h-y2{
+
+.content-a-w-h-y2 {
     font-size: 25px;
     font-weight: bolder;
     color: #777777;
 }
-.footer{
+
+.footer {
     background-color: #333333;
     height: 200px;
     z-index: 999;
     height: 20rem;
 }
-#footer-input-email{
+
+#footer-input-email {
     width: 40%;
     border-radius: 20px;
     padding: 0px;
     border-radius: 1rem;
     outline: none;
 }
-.footer-links{
+
+.footer-links {
     color: white;
 }
-.footer-links-border{
+
+.footer-links-border {
     border-left: 1.7px solid white;
     margin-right: 7px;
 }
-.footer-copy-right{
+
+.footer-copy-right {
     color: white;
     border-top: 1.7px solid white;
     border-bottom: 1.7px solid white;
     padding: 5px;
 }
+
+
 /* animation key typing */
+
+
 /* #share-a{
     opacity: 0;
 }

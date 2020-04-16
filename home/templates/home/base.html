@@ -8,19 +8,27 @@
     <title>{% block title %} {% endblock title %}| CoLab</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+<<<<<<< HEAD:home/templates/home/base.html
     <link rel="stylesheet" type="text/css" href="{% static "assets/header.css"%}">
+=======
+    <link rel="stylesheet" href="/static/assets/css/preloader.css">
+    <link rel="stylesheet" href="/static/assets/css/header.css">
+>>>>>>> a4d65a81e0530389a9a2b07699b4b15ab59c937a:templates/base.html
 </head>
 
 <body>
 
     <!-- preloader start -->
-    <div id="preloader"> </div>
+    <img src="/static/images/colab" alt="preloader" class="logoloader">
+
     <!-- preloader end -->
     <!-- Navbar start -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light header-nav shadow" id="header-nav" style="padding-top:0px; background-color:white;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid" id="main-container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light header-nav shadow" id="header-nav" style="padding-top:0px; background-color:white;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+<<<<<<< HEAD:home/templates/home/base.html
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand logo-header" href="#">
                 <img src="{% static "images/Logo.png" %}" alt="Logo" class="img-responsive mt-2" style="max-width: 60px;" id="logo-img">
@@ -56,51 +64,98 @@
         <div class="row mt-5">
             <div class="col-2 text-right mt-3">
                 <img src="{% static "images/Logo.png"%}" alt="Logo" class="img-fluid" style="max-width: 60px;">
+=======
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand logo-header" href="#">
+                    <img src="/static/images/Logo.png" alt="Logo" class="img-responsive mt-2" style="max-width: 60px;" id="logo-img">
+                </a>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 headers-link" style="margin-right: 10rem;">
+                    <li class="nav-item active mr-3">
+                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="#">AUTHORS</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="#">DONATE</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="#">CATEGORIES</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 7rem;">
+                        <a class="nav-link" href="#">SIGNIN</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <button class="nav-link btn btn-primary text-center font-weight-bold header-btn" style="color: white; background: #0044fb;">GET STARTED</button>
+                    </li>
+                </ul>
+>>>>>>> a4d65a81e0530389a9a2b07699b4b15ab59c937a:templates/base.html
             </div>
-            <div class="col-9 text-center mt-4"><input type="email" id="footer-input-email" placeholder="   Your email address"></div>
-            <div class="offset-1"></div>
+        </nav>
+        <!-- Navbar end -->
+        {% block body %} {% endblock body %}
+        <!-- footer -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="row mt-5">
+                <div class="col-2 text-right mt-3">
+                    <img src="images/Logo.png" alt="Logo" class="img-fluid" style="max-width: 60px;">
+                </div>
+                <div class="col-9 text-center mt-4"><input type="email" id="footer-input-email" placeholder="   Your email address"></div>
+                <div class="offset-1"></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center"><button class="btn btn-primary">Subscribe</button></div>
+            </div>
+            <div class="row mt-3">
+                <div class="offset-1"></div>
+                <div class="col-3 text-center">
+                    <p class="footer-links"><span class="footer-links-border"></span><a href="#" style="color: white;"> Have an account? SIGN IN</a></p>
+                </div>
+                <div class="col-4 text-center">
+                    <p class="footer-links"><span class="footer-links-border"></span><a href="#" style="color: white;"> Contact Us</a></p>
+                </div>
+                <div class="col-4 text-center">
+                    <p class="footer-links"><span class="footer-links-border"></span><a href="#" style="color: white;"> Help</a></p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="offset-1"></div>
+                <div class="col-3 mx-auto">
+                    <p class="footer-links ml-5"><span class="footer-links-border"></span><a href="#" style="color: white;"> Subscribe </a></p>
+                </div>
+                <div class="col-4 text-center">
+                    <p class="footer-links ml-2"><span class="footer-links-border"></span><a href="#" style="color: white;"> About Colab</a></p>
+                </div>
+                <div class="col-4 text-center">
+                    <p class="footer-links ml-5"><span class="footer-links-border ml-3"></span><a href="#" style="color: white;"> Private Policy</a></p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center"><span class="footer-copy-right">&nbsp;&nbsp;&copy; 2020, Colab-India&nbsp;&nbsp;</span></div>
+            </div>
         </div>
-        <div class="row mt-3">
-            <div class="col-12 text-center"><button class="btn btn-primary">Subscribe</button></div>
-        </div>
-        <div class="row mt-3">
-            <div class="offset-1"></div>
-            <div class="col-3 text-center">
-                <p class="footer-links"><span class="footer-links-border"></span><a href="#" style="color: white;"> Have an account? SIGN IN</a></p>
-            </div>
-            <div class="col-4 text-center">
-                <p class="footer-links"><span class="footer-links-border"></span><a href="#" style="color: white;"> Contact Us</a></p>
-            </div>
-            <div class="col-4 text-center">
-                <p class="footer-links"><span class="footer-links-border"></span><a href="#" style="color: white;"> Help</a></p>
-            </div>
-        </div>
-        <div class="row mt-2">
-            <div class="offset-1"></div>
-            <div class="col-3 mx-auto">
-                <p class="footer-links ml-5"><span class="footer-links-border"></span><a href="#" style="color: white;"> Subscribe </a></p>
-            </div>
-            <div class="col-4 text-center">
-                <p class="footer-links ml-2"><span class="footer-links-border"></span><a href="#" style="color: white;"> About Colab</a></p>
-            </div>
-            <div class="col-4 text-center">
-                <p class="footer-links ml-5"><span class="footer-links-border ml-3"></span><a href="#" style="color: white;"> Private Policy</a></p>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12 text-center"><span class="footer-copy-right">&nbsp;&nbsp;&copy; 2020, Colab-India&nbsp;&nbsp;</span></div>
-        </div>
+        <!-- end footer -->
     </div>
-    <!-- end footer -->
-    
+    <!-- end main container   -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<<<<<<< HEAD:home/templates/home/base.html
     <script src="{% static "assets/typed.min.js"%}"></script>
      {% block JavascriptBlock %}
      
      {% endblock JavascriptBlock %}
     <script >
+=======
+
+    {% block JavascriptBlock %} {% endblock JavascriptBlock %}
+    <script>
+        $(document).ready(function() {
+            $('.logoloader').css('display', 'none');
+            $('#main-container').css('display', 'block');
+        });
+>>>>>>> a4d65a81e0530389a9a2b07699b4b15ab59c937a:templates/base.html
         $(document).on("scroll", function() {
 
             if ($(document).scrollTop() > 50) {
