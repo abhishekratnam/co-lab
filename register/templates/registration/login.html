@@ -1,0 +1,29 @@
+{% extends 'home/index.html' %}
+<style>
+    .container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
+</style>
+
+{% block title %}
+Login Here
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <form method="post" class="form-group">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <p>Don't have an account? create one <a href= "/register">here</a> </p>
+
+    <button type="submit" class="btn btn-success">Login</button>
+</form>
+</div>
+
+{% endblock %}

@@ -1,8 +1,10 @@
-{% extends 'base.html' %} {% block title %}Home{% endblock title %} {% block body %}
+{% extends 'home/base.html' %} {% block title %}Home{% endblock title %} {% block body %}{% load static %}
 <!-- banner for landing page -->
-<div class="row banner-main">
+    {% block content %}
+    {% endblock %}
+    <div class="row banner-main">
     <div class="col-12">
-        <img src="/static/images/latestbanner1.png" alt="Landing Image" class="img-thumbnail">
+        <img src="{% static "images/latestbanner1.png"%}" alt="Landing Image" class="img-thumbnail">
         <div class="top-content-banner">
             <p><span id="write-share-colab-a"></span></p>
         </div>
@@ -12,9 +14,11 @@
                 <a href="#" style="color: white;">STORIES</a>
             </p>
         </div>
-        <div class="col-12 text-center landing-btn-banner"><button class="btn" style="background: #0044fb; color: white;">GET STARTED</button></div>
+        <div class="col-12 text-center landing-btn-banner">
+            <a class="btn" style="background: #0044fb; color: white;" href="/register">GET STARTED</a></div>
+
         <div class="col-12 text-center landing-signin-banner">
-            <p><a href="#" style="color: lightgray;">Alread have an account?</a> <a href="#" style="font-weight: bold; color: white;">SIGN IN</a></p>
+            <p>Alread have an account? <a href="/login" style="font-weight: bold; color: black;">SIGN IN</a></p>
         </div>
         <div class="col-12 text-center dash-banner"></div>
     </div>
@@ -23,7 +27,7 @@
 <!-- three easy steps image -->
 <div class="row">
     <div class="col-12 text-center mt-3">
-        <img src="/static/images/threeEasySteps.jpeg" alt="3 easy steps" class="img-fluid">
+        <img src="{% static "images/threeEasySteps.jpeg"%}" alt="3 easy steps" class="img-fluid">
     </div>
 </div>
 <!-- end three easy steps image -->
@@ -39,14 +43,14 @@
         </ul>
     </div>
     <div class="col-5">
-        <img src="/static/images/writeShareRegister.jpeg" alt="Write Share Register" class="img-fluid">
+        <img src="{% static "images/writeShareRegister.jpeg" %}" alt="Write Share Register" class="img-fluid">
     </div>
 </div>
 <!-- end write share register image and some text on left side -->
 <!-- we help you image -->
 <div class="row mt-5">
     <div class="col-12 text-center">
-        <img src="/static/images/weHelopYou.jpeg" alt="we Help You" class="img-fluid">
+        <img src="{% static "images/weHelopYou.jpeg" %}" alt="we Help You" class="img-fluid">
     </div>
 </div>
 <!-- end we helop you image -->
@@ -85,7 +89,7 @@
 </div>
 <!-- end content after we help you image -->
 {% endblock body %} {% block JavascriptBlock %}
-<script>
+ <script src="{% static 'assets/typed.min.js' %}">
     $(document).ready(function() {
         var typed = new Typed('#write-share-colab-a', {
             strings: ['WRITE  .  SHARE  .  COLAB.'],

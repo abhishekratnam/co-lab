@@ -1,0 +1,22 @@
+{% extends "home/index.html" %}
+{% load crispy_forms_tags %}
+<style>
+    .container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
+</style>
+{% block content %}
+    <div class="container">
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+    </div>
+{% endblock %}
