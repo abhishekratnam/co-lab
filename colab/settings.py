@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
-    'user_profile.apps.UserProfileConfig',
+    #'user_profile.apps.UserProfileConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'api',
     'register',
     'crispy_forms',
+    'user_profile'
 ]
 
 MIDDLEWARE = [
