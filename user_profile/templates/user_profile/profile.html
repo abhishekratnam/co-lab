@@ -1,8 +1,85 @@
 {% extends "user_profile/header.html" %}
+{% load static %}
 {% block title %}Profile{% endblock title %}
 <!-- body -->
 {% block body %}
 <!-- cover photo -->
-    <img id="cover-photo" src="https://images.unsplash.com/photo-1563991655280-cb95c90ca2fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="cover-photo">
+<img id="cover-photo"
+    src="https://images.unsplash.com/photo-1563991655280-cb95c90ca2fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    alt="cover-photo">
 <!-- end cover photo -->
+<!-- profile side bar for user profil show -->
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="us-img text-center" style="width: 18rem; border: 1px solid;">
+                <img src="{% static "images/user_default_img.jpeg" %}" class="card-img-top" alt="User Image" style="width: 150px;" id="u-img">
+            </div>
+            <div class="card custom-shadow user-img" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="temp">
+
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-start">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    <button class="shadow p-3 mb-5 bg-white w-100" style="border: 1px solid orangered; color: orangered; text-transform: uppercase;">Add new +</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card w-100 shadow p-3 mb-5 bg-white" style="border: 1px solid white;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 text-center" style="height: 84px; border: 1px solid red;">
+                                    <img src="{% static "images/user_default_img.jpeg" %}" class="img-fluid" alt="User Image" style="width: 92px; border: 1px solid;">
+                                </div>
+                                <div class="col-9">
+                                    <div class="row" style="height: 42px; border: 1px solid yellow;">Mohit Gopal</div>
+                                    <div class="row" style="height: 42px; border: 1px solid yellow;"><span class="align-bottom">April 14</span></div>
+                                </div>
+                                <div class="col-1 text-right border ">:</div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock body %}
