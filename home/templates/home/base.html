@@ -49,7 +49,95 @@
         </div>
     </nav>
     <!-- Navbar end -->
-    {% block body %}   {% endblock body %}
+    <!-- body -->
+    <!-- banner for landing page -->
+    {% block content %}
+    {% endblock %}
+    <div class="row banner-main">
+    <div class="col-12">
+        <img src="{% static "images/latestbanner1.png"%}" alt="Landing Image" class="img-thumbnail">
+        <div class="top-content-banner">
+            <p><span id="write-share-colab-a"></span></p>
+        </div>
+        <div class="links-content-banner text-center col-12">
+            <p><a href="#" style="color: white;">RESEARCH PAPERS</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#" style="color: white;">ARTICLES</a>&nbsp;&nbsp; |&nbsp;&nbsp;
+                <a href="#" style="color: white;">STORIES</a>
+            </p>
+        </div>
+        <div class="col-12 text-center landing-btn-banner">
+            <a class="btn" style="background: #0044fb; color: white;" href="/register">GET STARTED</a></div>
+
+        <div class="col-12 text-center landing-signin-banner">
+            <p>Alread have an account? <a href="/login" style="font-weight: bold; color: black;">SIGN IN</a></p>
+        </div>
+        <div class="col-12 text-center dash-banner"></div>
+    </div>
+</div>
+<!-- banner for landing page end -->
+<!-- three easy steps image -->
+<div class="row">
+    <div class="col-12 text-center mt-3">
+        <img src="{% static "images/threeEasySteps.jpeg"%}" alt="3 easy steps" class="img-fluid">
+    </div>
+</div>
+<!-- end three easy steps image -->
+<!-- write share register image and some text on left side -->
+<div class="row mt-5">
+    <div class="col-6 left-content-home-main my-auto ml-5">
+        <ul class="left-content-home mt-5 ml-5">
+            <li><span class="first-l-l-c">A</span>re you an expert of some field?<br/> Want to guide someone?</li>
+            <br>
+            <li><span class="first-l-l-c">B</span>e a mentor.</li>
+            <br>
+            <li><span class="first-l-l-c">C</span>onnect with people having same interests.</li>
+        </ul>
+    </div>
+    <div class="col-5">
+        <img src="{% static "images/writeShareRegister.jpeg" %}" alt="Write Share Register" class="img-fluid">
+    </div>
+</div>
+<!-- end write share register image and some text on left side -->
+<!-- we help you image -->
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <img src="{% static "images/weHelopYou.jpeg" %}" alt="we Help You" class="img-fluid">
+    </div>
+</div>
+<!-- end we helop you image -->
+<!-- content after we help you image -->
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <p class="m-c-a-w-h-y shadow">#1 Write down what you have in mind</p>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-12 text-center">
+        <p class="content-a-w-h-y">be it...</p>
+    </div>
+    <div class="col-12 text-center">
+        <p class="content-a-w-h-y">An Article</p>
+    </div>
+    <div class="col-12 text-center">
+        <p class="content-a-w-h-y">A Research Paper or</p>
+    </div>
+    <div class="col-12 text-center">
+        <p class="content-a-w-h-y">A Story.</p>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <p class="m-c-a-w-h-y shadow">#2 Colab with people that wrote an article/research</p>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <p class="content-a-w-h-y2">AND ANYONE CAN DO THE SAME</p>
+    </div>
+    <div class="col-12 text-center">
+        <p class="content-a-w-h-y2">BUT IT IS UPTO YOU TO APPROVE.</p>
+    </div>
+</div>
     <!-- footer -->
     <!-- footer -->
     <div class="footer">
@@ -96,10 +184,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="{% static "assets/typed.min.js"%}"></script>
-     {% block JavascriptBlock %}
-     
-     {% endblock JavascriptBlock %}
+    <script src="{% static 'assets/typed.min.js'%}"></script>
     <script >
         $(document).on("scroll", function() {
 
@@ -112,7 +197,16 @@
                 $("#header-nav").removeClass("header-shrink");
                 $('#logo-img').addClass("mt-2");
             }
+            
+        var typed = new Typed('#write-share-colab-a', {
+            strings: ['WRITE  .  SHARE  .  COLAB.'],
+            typeSpeed: 100,
+            loop: true,
+            backSpeed: 100,
+            backDelay: 300
         });
+
+        });//document.ready();
     </script>
 </body>
 
