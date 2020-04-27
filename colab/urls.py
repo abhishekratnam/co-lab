@@ -15,13 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from register import views as v
+# from register import views as v
+from account.views import (registration_view,logout_view, login_view,account_view)
 urlpatterns = [
+    # path('home/', include('home.urls'),name='home'),# redirect issue in registration
+    # path('register/',include('register.urls')),
+    # path('api/', include('api.urls')),
+    # path('',include('django.contrib.auth.urls')),
+    path('register/', registration_view, name='register'),
+    path('', include('home.urls'), name='home'),# login page
     path('admin/', admin.site.urls),
-    path('home/', include('home.urls')),# redirect issue in registration
-    #path('', include('home.urls')),#login page
-    path('register/',include('register.urls')),
-    path('api/', include('api.urls')),
-    path('',include('django.contrib.auth.urls')),
-    path('profile/',include('user_profile.urls')) #path for profile
+    path('profile/',include('user_profile.urls'),name='profile'), #path for profile
+    path('logout/',logout_view,name='logout'),
+    path('login/',login_view,name='login'),
+    path('account/',account_view,name='account'),
 ]

@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api',
-    'register',
+    # 'api',
+    # 'register',
     'crispy_forms',
-    'user_profile'
+    'user_profile',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,7 @@ TEMPLATES = [
         },
     },
 ]
+AUTH_USER_MODEL = 'account.Account'
 
 WSGI_APPLICATION = 'colab.wsgi.application'
 

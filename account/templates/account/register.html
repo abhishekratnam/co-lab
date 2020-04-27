@@ -1,0 +1,37 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+<style>
+    .container {
+  width: 500px;
+  clear: both;
+}
+.container input {
+  width: 100%;
+  clear: both;
+}
+</style>
+{% block body %}
+{% block content %}
+    <div class="container">
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% for field in registeration_form %}
+            <p>
+                {{ field.label_tag }}
+                {{ field }}
+
+                {% if field.help_text %}
+                    <small style="color: gray">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <p style="color: red">{{ field.help_text }}</p>
+                {% endfor %}
+            </p>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+    </div>
+{% endblock content%}
+{% endblock body %}
