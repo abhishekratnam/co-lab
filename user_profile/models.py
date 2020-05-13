@@ -5,7 +5,6 @@ from account.models import Account
 from django.contrib.auth import authenticate
 
 
-
 STATUS = (
     (0,'Draft'),
     (1,'Publish')
