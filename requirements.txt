@@ -1,5 +1,6 @@
 asgiref==3.2.3
 astroid==2.3.3
+django-crispy-forms
 attrs==19.3.0
 Automat==20.2.0
 beautifulsoup4==4.8.2
